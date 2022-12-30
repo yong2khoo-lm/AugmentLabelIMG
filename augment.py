@@ -252,15 +252,7 @@ def xmlmirror(pathtoxml, xmlname):
             i = int(re.search(r'\d+', line).group())
             ymin0.append(i)
         if '<width>' in line:
-            if '-270' in xmlname:
-                pass
-            else:
-                w = int(re.search(r'\d+', line).group())
-        if '<height>' in line:
-            if '-270' in xmlname:
-                w = int(re.search(r'\d+', line).group())
-            else:
-                pass
+            w = int(re.search(r'\d+', line).group())
     # write
     yminn = 0
     xminn = 0
